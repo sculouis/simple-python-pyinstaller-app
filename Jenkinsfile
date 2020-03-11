@@ -1,16 +1,6 @@
 pipeline {
     agent none 
     stages {
-        stage('GetNewVersion') { 
-            agent {
-                docker {
-                    image 'python:2-alpine' 
-                }
-            }
-            steps {
-                sh 'git pull' 
-            }
-        }
         stage('Build') { 
             agent {
                 docker {
