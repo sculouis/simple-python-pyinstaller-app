@@ -2,6 +2,7 @@ pipeline {
     agent none 
     stages {
         stage('GetNewVersion') { 
+            agent none
             steps {
                 sh 'git pull' 
             }
