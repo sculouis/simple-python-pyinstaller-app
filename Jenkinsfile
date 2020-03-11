@@ -1,6 +1,11 @@
 pipeline {
     agent none 
     stages {
+        stage('GetNewVersion') { 
+            steps {
+                sh 'git pull' 
+            }
+        }
         stage('Build') { 
             agent {
                 docker {
